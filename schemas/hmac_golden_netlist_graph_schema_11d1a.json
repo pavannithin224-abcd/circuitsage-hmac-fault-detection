@@ -1,0 +1,218 @@
+{
+  "boundary_table_fields": [
+    "boundary_index",
+    "source_kind",
+    "source_name",
+    "source_pin_index",
+    "bit_value",
+    "destination_node_index",
+    "destination_site_id",
+    "destination_cell",
+    "destination_port",
+    "destination_pin_index",
+    "edge_role"
+  ],
+  "driver_cell_type_codes": {
+    "$_AND_": 0,
+    "$_DFFE_PN0P_": 1,
+    "$_DFFE_PN1P_": 2,
+    "$_DFFE_PP_": 3,
+    "$_DFF_PN0_": 4,
+    "$_MUX_": 5,
+    "$_NOT_": 6,
+    "$_OR_": 7,
+    "$_XOR_": 8
+  },
+  "edge_definition": "GOLDEN_NETLIST_DRIVER_TO_CELL_INPUT_SINK",
+  "edge_roles": [
+    "DATA",
+    "SELECT",
+    "ENABLE",
+    "CLOCK",
+    "RESET",
+    "OTHER"
+  ],
+  "edge_table_fields": [
+    "edge_index",
+    "source_node_index",
+    "destination_node_index",
+    "source_site_id",
+    "destination_site_id",
+    "multiplicity",
+    "data_branches",
+    "select_branches",
+    "enable_branches",
+    "clock_branches",
+    "reset_branches",
+    "other_branches",
+    "is_self_loop"
+  ],
+  "fault_instance_count": 45678,
+  "graph_type": "DIRECTED_COLLAPSED_MULTIGRAPH",
+  "holdout_vectors_exposed": 0,
+  "node_definition": "ONE_NODE_PER_LEGAL_PERSISTENT_CELL_OUTPUT_NET_STEM",
+  "node_indexing": "ZERO_BASED_SITE_INDEX_MINUS_ONE",
+  "node_table_fields": [
+    "node_index",
+    "site_id",
+    "site_index",
+    "partition",
+    "partition_rank",
+    "driver_cell",
+    "driver_cell_type",
+    "site_category",
+    "output_port",
+    "output_pin_index",
+    "bit_id",
+    "net_name",
+    "cell_fanout",
+    "derived_sink_branches",
+    "is_primary_output_stem",
+    "primary_output_names",
+    "in_degree_branches",
+    "out_degree_branches",
+    "in_neighbor_count",
+    "out_neighbor_count"
+  ],
+  "npz_arrays": {
+    "edge_clock_branches": {
+      "dtype": "<u2",
+      "shape": [
+        47617
+      ]
+    },
+    "edge_data_branches": {
+      "dtype": "<u2",
+      "shape": [
+        47617
+      ]
+    },
+    "edge_enable_branches": {
+      "dtype": "<u2",
+      "shape": [
+        47617
+      ]
+    },
+    "edge_index": {
+      "dtype": "<i4",
+      "shape": [
+        2,
+        47617
+      ]
+    },
+    "edge_is_self_loop": {
+      "dtype": "|u1",
+      "shape": [
+        47617
+      ]
+    },
+    "edge_multiplicity": {
+      "dtype": "<u2",
+      "shape": [
+        47617
+      ]
+    },
+    "edge_other_branches": {
+      "dtype": "<u2",
+      "shape": [
+        47617
+      ]
+    },
+    "edge_reset_branches": {
+      "dtype": "<u2",
+      "shape": [
+        47617
+      ]
+    },
+    "edge_select_branches": {
+      "dtype": "<u2",
+      "shape": [
+        47617
+      ]
+    },
+    "node_cell_fanout": {
+      "dtype": "<u4",
+      "shape": [
+        22839
+      ]
+    },
+    "node_driver_type_code": {
+      "dtype": "|u1",
+      "shape": [
+        22839
+      ]
+    },
+    "node_in_degree_branches": {
+      "dtype": "<u4",
+      "shape": [
+        22839
+      ]
+    },
+    "node_in_neighbor_count": {
+      "dtype": "<u4",
+      "shape": [
+        22839
+      ]
+    },
+    "node_is_primary_output": {
+      "dtype": "|u1",
+      "shape": [
+        22839
+      ]
+    },
+    "node_out_degree_branches": {
+      "dtype": "<u4",
+      "shape": [
+        22839
+      ]
+    },
+    "node_out_neighbor_count": {
+      "dtype": "<u4",
+      "shape": [
+        22839
+      ]
+    },
+    "node_partition_code": {
+      "dtype": "|u1",
+      "shape": [
+        22839
+      ]
+    },
+    "node_partition_rank": {
+      "dtype": "<u4",
+      "shape": [
+        22839
+      ]
+    },
+    "node_site_category_code": {
+      "dtype": "|u1",
+      "shape": [
+        22839
+      ]
+    },
+    "node_site_index": {
+      "dtype": "<u4",
+      "shape": [
+        22839
+      ]
+    }
+  },
+  "parallel_edge_policy": "COLLAPSED_WITH_MULTIPLICITY_AND_ROLE_COUNTS",
+  "partition_codes": {
+    "DEV_CALIBRATION": 1,
+    "DEV_SITE_TEST": 2,
+    "DEV_TRAIN": 0
+  },
+  "physical_site_count": 22839,
+  "post_simulation_features": 0,
+  "schema_version": "HMAC-GOLDEN-NETLIST-GRAPH-SCHEMA-v1",
+  "self_loop_policy": "RETAINED_AND_FLAGGED",
+  "site_category_codes": {
+    "COMBINATIONAL_LOGIC_STEM": 0,
+    "SEQUENTIAL_STATE_STEM": 1
+  },
+  "stage": "11D-1A",
+  "status": "PASS",
+  "target_in_graph_features": false,
+  "validation_vectors_exposed": 0
+}

@@ -1,0 +1,47 @@
+{
+  "frontend_work_authorized": false,
+  "mandatory_exclusions": [
+    ".venv/**",
+    "build/**",
+    "third_party/opentitan/** as copied source; use a pinned upstream commit/submodule instead",
+    "results/**/private/**",
+    "**/entropy.json",
+    "**/truth.json",
+    "**/capture_plan.json",
+    "raw campaign CSV files and generated simulator binaries",
+    "large NPZ/CSV/GZIP datasets unless separately released with explicit size/license review",
+    "credentials, tokens, private keys, shell history, machine-specific paths, and personal files"
+  ],
+  "mandatory_pre_push_checks": [
+    "Secret scan passes",
+    "Private blinded-case artifacts are absent",
+    "Every release file matches the release manifest",
+    "A clean-environment smoke test passes",
+    "Model-loading and example inference work without retraining",
+    "License and upstream attribution review passes",
+    "Large-file policy and Git LFS decision are documented",
+    "No claim describes MCC as percentage accuracy",
+    "README states that validation retention was NOT_MET and HOLDOUT was not opened"
+  ],
+  "model_change_policy": "Any retraining, threshold change, feature change, new fault type, or new circuit must use a new version and new evaluation protocol.",
+  "next_gate": "STAGE 11E-1I \u2014 REPRODUCIBLE GITHUB RELEASE BUNDLE GENERATION AND SANITIZATION FREEZE",
+  "public_push_authorized": false,
+  "release_bundle_generation_authorized": true,
+  "release_owner": "Pavan Nithin",
+  "release_readiness_status": "FROZEN",
+  "required_release_components": [
+    "README with setup, training, inference, limitations, and reproduction commands",
+    "Project LICENSE plus third-party attribution and OpenTitan license/commit notice",
+    "Frozen hybrid model artifact and safe-use warning for joblib deserialization",
+    "Model card containing development and validation results",
+    "Architecture, feature, graph, split, training, and inference contracts",
+    "Dataset schemas, commitments, and regeneration instructions\u2014not multi-gigabyte raw data",
+    "Source scripts required to rebuild datasets, train comparators, evaluate, and reproduce the behavior pilot",
+    "Python requirements and OSS-CAD-Suite/OpenTitan environment documentation",
+    "SHA-256 release manifest covering every published file",
+    "CITATION.cff and clear maintainer/authorship information"
+  ],
+  "stage": "11E-1H",
+  "status": "PASS",
+  "version": "HMAC-FINAL-PROJECT-DISPOSITION-v1"
+}

@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+build/
+third_party/
+results/**/private/
+**/entropy.json
+**/truth.json
+**/capture_plan.json
+*.vcd
+*.fst
+*.log

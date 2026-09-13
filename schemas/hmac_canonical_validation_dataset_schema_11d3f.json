@@ -1,0 +1,349 @@
+{
+  "added_fields": {
+    "digest_hamming_distance": "popcount(int(expected_digest,16) XOR int(actual_digest,16))",
+    "latency_delta": "cycles - baseline_cycles",
+    "record_id": "zero-based global row ordinal"
+  },
+  "baseline_identity": [
+    "batch_id",
+    "vector_id"
+  ],
+  "canonical_header": [
+    "record_id",
+    "vector_split",
+    "batch_id",
+    "run_type",
+    "site_selection",
+    "selector",
+    "site_id",
+    "stuck_value",
+    "vector_slot",
+    "vector_id",
+    "fault_enable",
+    "cycles",
+    "baseline_cycles",
+    "latency_delta",
+    "timed_out",
+    "activity",
+    "detected",
+    "unknown",
+    "digest_hamming_distance",
+    "expected_digest",
+    "actual_digest"
+  ],
+  "canonical_order": "batch_id ascending, then frozen raw CSV row order; contiguous zero-based record_id",
+  "compression": {
+    "algorithm": "gzip",
+    "filename": "",
+    "level": 6,
+    "line_ending": "LF",
+    "mtime": 0,
+    "text_encoding": "UTF-8"
+  },
+  "constraints": {
+    "baseline_cycles": 343,
+    "baseline_records": 2160,
+    "baseline_site_id": "BASELINE",
+    "baseline_site_selection_selector_stuck_value": -1,
+    "batch_id": "0..44",
+    "cycles": "0..2000",
+    "digest_hamming_distance": "0..256",
+    "enabled_records": 2192544,
+    "fault_scope": "PERSISTENT_NET_STEM_SA0_SA1_ONLY",
+    "latency_delta": "-343..1657",
+    "record_id": "0..2194703",
+    "run_type": [
+      "BASELINE",
+      "ENABLED"
+    ],
+    "timeout_cycles": 2000,
+    "unknown": 0,
+    "vector_ids": [
+      1,
+      4,
+      13,
+      14,
+      16,
+      26,
+      37,
+      38,
+      41,
+      46,
+      54,
+      60,
+      62,
+      64,
+      72,
+      75,
+      79,
+      86,
+      91,
+      109,
+      114,
+      116,
+      120,
+      122,
+      124,
+      137,
+      139,
+      143,
+      153,
+      171,
+      173,
+      178,
+      179,
+      181,
+      188,
+      190,
+      191,
+      192,
+      214,
+      232,
+      240,
+      241,
+      242,
+      245,
+      246,
+      247,
+      249,
+      251
+    ],
+    "vector_split": [
+      "VALIDATION"
+    ]
+  },
+  "dataset_name": "OpenTitan HMAC-SHA256 SA0/SA1 VALIDATION",
+  "detection_reason_counts_overlap": true,
+  "fault_instance_summary": {
+    "classification_rule": "DETECTED if detected_vectors>0; else ACTIVATED_UNOBSERVED if activated_vectors>0; else UNACTIVATED",
+    "classification_scope": "these 48 VALIDATION vectors only",
+    "column_types": [
+      "string",
+      "string",
+      "uint32",
+      "uint8",
+      "uint16",
+      "bool",
+      "string",
+      "string",
+      "uint8",
+      "uint8",
+      "uint8",
+      "uint8",
+      "enum"
+    ],
+    "header": [
+      "fault_instance_id",
+      "site_id",
+      "site_index",
+      "batch_id",
+      "selector",
+      "stuck_value",
+      "site_category",
+      "driver_cell_type",
+      "validation_vectors",
+      "activated_vectors",
+      "detected_vectors",
+      "timeout_vectors",
+      "final_classification"
+    ],
+    "identity": "fault_instance_id = site_id + '-SA' + stuck_value",
+    "order": "global site_index ascending, then SA0, SA1",
+    "rows": 45678
+  },
+  "fields": [
+    {
+      "description": "Canonical zero-based row number",
+      "name": "record_id",
+      "nullable": false,
+      "role": "identifier",
+      "type": "uint64"
+    },
+    {
+      "description": "Frozen vector partition; VALIDATION in this artifact",
+      "name": "vector_split",
+      "nullable": false,
+      "role": "partition",
+      "type": "enum"
+    },
+    {
+      "description": "Fault batch number, 0 through 44",
+      "name": "batch_id",
+      "nullable": false,
+      "role": "provenance",
+      "type": "uint8"
+    },
+    {
+      "description": "BASELINE or ENABLED",
+      "name": "run_type",
+      "nullable": false,
+      "role": "row_type",
+      "type": "enum"
+    },
+    {
+      "description": "Local batch site index; -1 for baseline",
+      "name": "site_selection",
+      "nullable": false,
+      "role": "identifier",
+      "type": "int16"
+    },
+    {
+      "description": "Instrumented selector; -1 for baseline",
+      "name": "selector",
+      "nullable": false,
+      "role": "identifier",
+      "type": "int16"
+    },
+    {
+      "description": "Frozen global fault site ID",
+      "name": "site_id",
+      "nullable": false,
+      "role": "identifier",
+      "type": "string"
+    },
+    {
+      "description": "SA0=0, SA1=1, baseline=-1",
+      "name": "stuck_value",
+      "nullable": false,
+      "role": "fault_attribute",
+      "type": "int8"
+    },
+    {
+      "description": "Committed VALIDATION order, 0 through 47",
+      "name": "vector_slot",
+      "nullable": false,
+      "role": "identifier",
+      "type": "uint8"
+    },
+    {
+      "description": "Frozen vector-pool ID",
+      "name": "vector_id",
+      "nullable": false,
+      "role": "identifier",
+      "type": "uint16"
+    },
+    {
+      "description": "1 for injected records, otherwise 0",
+      "name": "fault_enable",
+      "nullable": false,
+      "role": "control",
+      "type": "bool"
+    },
+    {
+      "description": "Observed transaction latency",
+      "name": "cycles",
+      "nullable": false,
+      "role": "measured_observable",
+      "type": "uint16"
+    },
+    {
+      "description": "Frozen no-fault latency",
+      "name": "baseline_cycles",
+      "nullable": false,
+      "role": "reference",
+      "type": "uint16"
+    },
+    {
+      "description": "cycles minus baseline_cycles",
+      "name": "latency_delta",
+      "nullable": false,
+      "role": "derived_diagnostic",
+      "type": "int16"
+    },
+    {
+      "description": "Transaction reached timeout limit",
+      "name": "timed_out",
+      "nullable": false,
+      "role": "measured_observable",
+      "type": "bool"
+    },
+    {
+      "description": "Event-latched fault activation",
+      "name": "activity",
+      "nullable": false,
+      "role": "measured_observable",
+      "type": "bool"
+    },
+    {
+      "description": "Fault effect observed by digest, latency, or timeout",
+      "name": "detected",
+      "nullable": false,
+      "role": "evaluation_target",
+      "type": "bool"
+    },
+    {
+      "description": "Unknown simulation value; required to be zero",
+      "name": "unknown",
+      "nullable": false,
+      "role": "quality_flag",
+      "type": "bool"
+    },
+    {
+      "description": "Bit differences between expected and actual digest",
+      "name": "digest_hamming_distance",
+      "nullable": false,
+      "role": "derived_diagnostic",
+      "type": "uint16"
+    },
+    {
+      "description": "Simulation reference only; excluded from prediction features",
+      "name": "expected_digest",
+      "nullable": false,
+      "role": "reference_restricted",
+      "type": "hex256"
+    },
+    {
+      "description": "Observed 256-bit digest",
+      "name": "actual_digest",
+      "nullable": false,
+      "role": "measured_observable",
+      "type": "hex256"
+    }
+  ],
+  "inference_feature_policy": {
+    "baseline_rows": "reference checks only; exclude from fault prediction sample set",
+    "fit_scaler_or_model_on_validation": false,
+    "frozen_input_artifacts_modified": false,
+    "frozen_rtl_modified": false,
+    "golden_netlist_modified": false,
+    "holdout_campaign": "NOT_AUTHORIZED",
+    "holdout_payloads_emitted": 0,
+    "identifiers": "join/alignment only, subject to the frozen feature policy",
+    "model_deserialization_performed": false,
+    "model_inference_performed": false,
+    "model_retraining": "PROHIBITED",
+    "next_gate": "VALIDATION FEATURE MATRIX CONSTRUCTION AND INFERENCE-CONTRACT FREEZE",
+    "post_simulation_columns_excluded_from_X": [
+      "cycles",
+      "latency_delta",
+      "timed_out",
+      "activity",
+      "detected",
+      "unknown",
+      "digest_hamming_distance",
+      "actual_digest"
+    ],
+    "raw_campaign_dataset_modified": false,
+    "reference_digest_excluded_from_X": "expected_digest",
+    "this_file_is_not_X": true,
+    "threshold_changes": "PROHIBITED",
+    "training_performed": false,
+    "validation_model_inference": "NOT_AUTHORIZED"
+  },
+  "label_definition": "detected = timed_out OR actual_digest != expected_digest OR cycles != baseline_cycles",
+  "row_grain": "one baseline or one persistent fault/vector simulation",
+  "sample_identity": [
+    "batch_id",
+    "site_id",
+    "stuck_value",
+    "vector_id"
+  ],
+  "schema_status": "FROZEN",
+  "schema_version": "HMAC-FAULT-CANONICAL-VALIDATION-SCHEMA-v1",
+  "source_column_mapping": {
+    "other_raw_fields": "same name; digest hex normalized to lowercase",
+    "vector_partition": "vector_split"
+  },
+  "timeout_semantics": "retained as observed fault outcomes; baseline timeouts must be zero",
+  "unknown_check_scope": "flags recorded at transaction endpoints by the frozen simulator testbench"
+}

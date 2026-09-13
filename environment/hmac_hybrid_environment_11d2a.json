@@ -1,0 +1,146 @@
+{
+  "created_at_utc": "2026-09-05T15:03:49.058387+00:00",
+  "environment_status": "FROZEN",
+  "estimator_backend": "sklearn.neural_network.MLPClassifier",
+  "fusion_canary": {
+    "combined_features": 646,
+    "graph_features": 119,
+    "propagation_cache_sha256": "b5874b329a272f1f11baace3127d97e5ecbea8f6170936e7991a6aca4e02a2ce",
+    "records": 16,
+    "replay_exact": true,
+    "sample_features": 527,
+    "sha256": "7a96903ba8a375cb9c3a7dddecd69338def8200ddfcc0afa1f22dac7afb5aaaf",
+    "status": "PASS"
+  },
+  "input_evidence": {
+    "config/diagnostic_model/hmac_gnn_disposition_policy_11d1e.json": {
+      "bytes": 1796,
+      "path": "config/diagnostic_model/hmac_gnn_disposition_policy_11d1e.json",
+      "sha256": "be8df4b5b5e4d0bd8a7337f27d48179e9a636ffce5a2c7b394805390cd4f4197"
+    },
+    "config/diagnostic_model/hmac_hybrid_readiness_policy_11d1e.json": {
+      "bytes": 2500,
+      "path": "config/diagnostic_model/hmac_hybrid_readiness_policy_11d1e.json",
+      "sha256": "c961db485923bbd90efc09ad2bd804948a9392462aaa5436f4780da4069ffda5"
+    },
+    "results/hmac_fault_campaign_11c5/feature_matrix_11c5e/hmac_dev_calibration_feature_matrix_11c5e.npz": {
+      "bytes": 665239,
+      "path": "results/hmac_fault_campaign_11c5/feature_matrix_11c5e/hmac_dev_calibration_feature_matrix_11c5e.npz",
+      "sha256": "ee18d68e4b1c742e8b8b163ab3f97f92f954e3da6af88f460b5b886ea73dd05b"
+    },
+    "results/hmac_fault_campaign_11c5/feature_matrix_11c5e/hmac_dev_site_test_feature_matrix_11c5e.npz": {
+      "bytes": 665132,
+      "path": "results/hmac_fault_campaign_11c5/feature_matrix_11c5e/hmac_dev_site_test_feature_matrix_11c5e.npz",
+      "sha256": "965f90be0dbdd33a47d85a9f0b0e41b95160410daee8255c5aa04fe92f1767b2"
+    },
+    "results/hmac_fault_campaign_11c5/feature_matrix_11c5e/hmac_dev_train_feature_matrix_11c5e.npz": {
+      "bytes": 3042413,
+      "path": "results/hmac_fault_campaign_11c5/feature_matrix_11c5e/hmac_dev_train_feature_matrix_11c5e.npz",
+      "sha256": "b4feebe3080ac540edf38dcde35212b790dfb0f93fa57f1f5fc71411bde3b6b0"
+    },
+    "results/hmac_fault_campaign_11c5/feature_matrix_11c5e/hmac_leakage_safe_feature_matrix_schema_11c5e.json": {
+      "bytes": 15891,
+      "path": "results/hmac_fault_campaign_11c5/feature_matrix_11c5e/hmac_leakage_safe_feature_matrix_schema_11c5e.json",
+      "sha256": "0bf1edffb8078b003a1116b276615d5544979d007712ab49870b1b93784e486c"
+    },
+    "results/hmac_fault_campaign_11c5/hmac_leakage_safe_feature_matrix_freeze_11c5e.json": {
+      "bytes": 2422,
+      "path": "results/hmac_fault_campaign_11c5/hmac_leakage_safe_feature_matrix_freeze_11c5e.json",
+      "sha256": "6320bb732b84ae56c937e188189fb87a159d35a164eed892ec3da9d1ee27e540"
+    },
+    "results/hmac_fault_campaign_11d1/gnn_evaluation_11d1d/hmac_gnn_vs_frozen_comparators_11d1d.json": {
+      "bytes": 3400,
+      "path": "results/hmac_fault_campaign_11d1/gnn_evaluation_11d1d/hmac_gnn_vs_frozen_comparators_11d1d.json",
+      "sha256": "5bfce5f1cb49b29dc3a17343dbd2ba5f5777e3ec11d9679efdd24b9bfbdaf0e1"
+    },
+    "results/hmac_fault_campaign_11d1/gnn_training_11d1c/hmac_directed_sgc_graph_features_11d1c.npz": {
+      "bytes": 810681,
+      "path": "results/hmac_fault_campaign_11d1/gnn_training_11d1c/hmac_directed_sgc_graph_features_11d1c.npz",
+      "sha256": "b5874b329a272f1f11baace3127d97e5ecbea8f6170936e7991a6aca4e02a2ce"
+    },
+    "results/hmac_fault_campaign_11d1/gnn_training_11d1c/hmac_gnn_selection_lock_11d1c.json": {
+      "bytes": 4950,
+      "path": "results/hmac_fault_campaign_11d1/gnn_training_11d1c/hmac_gnn_selection_lock_11d1c.json",
+      "sha256": "3f5b672d0bf152f4e68eaaeabf395cabf9ff7fa49a9807845ec5e104c0596e0b"
+    },
+    "results/hmac_fault_campaign_11d1/graph_dataset_11d1a/hmac_golden_netlist_graph_11d1a.npz": {
+      "bytes": 226071,
+      "path": "results/hmac_fault_campaign_11d1/graph_dataset_11d1a/hmac_golden_netlist_graph_11d1a.npz",
+      "sha256": "e3c2dd2214b544231186c29d8d9cb5aa6621b4d4b4bc9002150ac4f6c208c052"
+    },
+    "results/hmac_fault_campaign_11d1/graph_dataset_11d1a/hmac_golden_netlist_graph_schema_11d1a.json": {
+      "bytes": 4223,
+      "path": "results/hmac_fault_campaign_11d1/graph_dataset_11d1a/hmac_golden_netlist_graph_schema_11d1a.json",
+      "sha256": "d24c3dd285891e284d20d1adcd93f793bedfd3042f20159a8a486359bc25e393"
+    },
+    "results/hmac_fault_campaign_11d1/hmac_frozen_diagnostic_comparator_registry_11d1e.csv": {
+      "bytes": 969,
+      "path": "results/hmac_fault_campaign_11d1/hmac_frozen_diagnostic_comparator_registry_11d1e.csv",
+      "sha256": "5b6d9e3972c08e1043ed403b48dc96e612dd3b10a7890630b0d75bd099a52085"
+    },
+    "results/hmac_fault_campaign_11d1/hmac_frozen_diagnostic_comparator_registry_11d1e.json": {
+      "bytes": 2144,
+      "path": "results/hmac_fault_campaign_11d1/hmac_frozen_diagnostic_comparator_registry_11d1e.json",
+      "sha256": "e611003eb2c011b9315d505013acbf66be5b09cb08321308ea2c209f28020c49"
+    },
+    "results/hmac_fault_campaign_11d1/hmac_gnn_disposition_hybrid_readiness_freeze_11d1e.json": {
+      "bytes": 8043,
+      "path": "results/hmac_fault_campaign_11d1/hmac_gnn_disposition_hybrid_readiness_freeze_11d1e.json",
+      "sha256": "de89484ec1c244b141950ad259ad69163562ac70fd31e9659c8943c007e48339"
+    },
+    "results/hmac_fault_campaign_11d1/hmac_gnn_site_test_comparator_freeze_11d1d.json": {
+      "bytes": 2713,
+      "path": "results/hmac_fault_campaign_11d1/hmac_gnn_site_test_comparator_freeze_11d1d.json",
+      "sha256": "3555783dc613aec71a6f89c09b6c487b514aa0cfc68a6c7b42489018dbdb5a1b"
+    },
+    "results/hmac_fault_campaign_11d1/hmac_gnn_training_calibration_freeze_11d1c.json": {
+      "bytes": 2468,
+      "path": "results/hmac_fault_campaign_11d1/hmac_gnn_training_calibration_freeze_11d1c.json",
+      "sha256": "afe2c204fe2208f3a5805bf9e7bf7c7000bdef1a81dac8d651876d2cb633c079"
+    },
+    "results/hmac_fault_campaign_11d1/hmac_gnn_training_manifest_11d1c.json": {
+      "bytes": 10611,
+      "path": "results/hmac_fault_campaign_11d1/hmac_gnn_training_manifest_11d1c.json",
+      "sha256": "c40b118f9142e619218107397b324c0e14753d295952e45e32dd875534763fdf"
+    },
+    "results/hmac_fault_campaign_11d1/hmac_golden_netlist_graph_topology_integrity_freeze_11d1a.json": {
+      "bytes": 3336,
+      "path": "results/hmac_fault_campaign_11d1/hmac_golden_netlist_graph_topology_integrity_freeze_11d1a.json",
+      "sha256": "4b9aef6468b467350667338373c28dc5797e3f59ce989af71a18369f086dfeb9"
+    },
+    "stage_11d1e_gnn_disposition_hybrid_readiness.py": {
+      "bytes": 25689,
+      "path": "stage_11d1e_gnn_disposition_hybrid_readiness.py",
+      "sha256": "014465393c16d30270ebdc120595925e05e1298faee1e312762999d423dac0e0"
+    }
+  },
+  "logical_cpu_count": 16,
+  "machine": "x86_64",
+  "packages": {
+    "joblib": "1.5.3",
+    "numpy": "2.2.6",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.15.3",
+    "threadpoolctl": "3.6.0"
+  },
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "processor": "x86_64",
+  "propagation_cache": {
+    "bytes": 810681,
+    "path": "results/hmac_fault_campaign_11d1/gnn_training_11d1c/hmac_directed_sgc_graph_features_11d1c.npz",
+    "sha256": "b5874b329a272f1f11baace3127d97e5ecbea8f6170936e7991a6aca4e02a2ce"
+  },
+  "python": "3.10.12",
+  "python_executable": "${PROJECT_ROOT}/.venv/bin/python3",
+  "pytorch_required": false,
+  "required_external_gnn_framework": "NONE",
+  "stage": "11D-2A",
+  "status": "PASS",
+  "thread_limits": {
+    "MKL_NUM_THREADS": 1,
+    "NUMEXPR_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1
+  },
+  "torch_geometric_required": false
+}

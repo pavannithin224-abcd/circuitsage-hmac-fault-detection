@@ -1,0 +1,120 @@
+{
+  "absolute_performance_target": {
+    "balanced_accuracy_minimum": 0.7,
+    "f1_minimum": 0.7,
+    "mcc_minimum": 0.4,
+    "recall_minimum": 0.7
+  },
+  "architecture": {
+    "bytes": 2284,
+    "path": "config/diagnostic_model/hmac_hybrid_architecture_11d2a.json",
+    "sha256": "d213a89c53769c217ca9cca71700b03abc23f94d5302bc4309ea63b035016063"
+  },
+  "candidate_execution": "SEQUENTIAL",
+  "candidate_grid": {
+    "bytes": 583,
+    "path": "config/diagnostic_model/hmac_hybrid_candidate_grid_11d2a.csv",
+    "sha256": "3aaea24ec28c4680ebd24ecef345ab82ab910c07a6f5240dc762f196c8032bbd"
+  },
+  "candidate_tie_break": [
+    "HIGHER_MCC",
+    "HIGHER_BALANCED_ACCURACY",
+    "HIGHER_RECALL",
+    "LEXICAL_CANDIDATE_ID"
+  ],
+  "checkpoint_after_each_candidate": true,
+  "class_weighting": "GLOBAL_DEV_TRAIN_BALANCED_RESAMPLING",
+  "combined_features": 646,
+  "created_at_utc": "2026-09-05T15:03:49.058387+00:00",
+  "dev_site_test_opening_authorized": false,
+  "epochs_per_candidate": 4,
+  "estimated_cpu_training_time": "45-180 MINUTES",
+  "fault_instances": 45678,
+  "fault_scope": "PERSISTENT_NET_STEM_SA0_SA1_ONLY",
+  "forbidden_features": [
+    "detected",
+    "activated",
+    "actual_digest",
+    "expected_digest",
+    "digest_mismatch",
+    "latency_mismatch",
+    "timeout",
+    "final_fault_classification",
+    "partition_code_or_name",
+    "site_id_or_site_index_identity",
+    "dev_site_test_comparator_predictions",
+    "in_sample_frozen_model_scores"
+  ],
+  "gpu_required": false,
+  "graph_feature_scaler": "REUSE_FROZEN_11D1C_DEV_TRAIN_NODE_SCALER",
+  "graph_features": 119,
+  "grouping_unit": "PHYSICAL_SITE",
+  "holdout_campaign_authorized": false,
+  "holdout_vectors_exposed": 0,
+  "hybrid_advancement_target": {
+    "comparison": "HYBRID_MINUS_FROZEN_GNN",
+    "failure_disposition": "RETAIN_FROZEN_GNN_AS_PROJECT_WINNER",
+    "primary_metric": "MCC",
+    "required_point_improvement": 0.02,
+    "statistical_rule": "PAIRED_PHYSICAL_SITE_95_PERCENT_CI_ENTIRELY_ABOVE_ZERO"
+  },
+  "internet_required": false,
+  "locked_comparators": [
+    "DIR_SGC_11D1D",
+    "DEEP_MLP_11C5K",
+    "CONVENTIONAL_LOGREG_11C5H"
+  ],
+  "maximum_resident_memory_policy": "LESS_THAN_8_GIB",
+  "minimum_validity": [
+    "MCC_GREATER_THAN_ZERO",
+    "BALANCED_ACCURACY_GREATER_THAN_HALF",
+    "BOTH_PREDICTED_CLASSES_PRESENT",
+    "FINITE_PROBABILITIES",
+    "NO_UNKNOWN_LABELS",
+    "DETERMINISTIC_REPLAY_EXACT"
+  ],
+  "model_family": "GRAPH_AUGMENTED_FEATURE_FUSION_MLP",
+  "parallel_candidates": 1,
+  "partitions": {
+    "DEV_CALIBRATION": {
+      "samples": 438528,
+      "sites": 3426,
+      "use": "SELECT_CANDIDATE_AND_THRESHOLD"
+    },
+    "DEV_SITE_TEST": {
+      "samples": 438528,
+      "sites": 3426,
+      "use": "LOCKED_UNTIL_HYBRID_SELECTION_FREEZE"
+    },
+    "DEV_TRAIN": {
+      "samples": 2046336,
+      "sites": 15987,
+      "use": "FIT_HYBRID_PARAMETERS"
+    }
+  },
+  "physical_graph_nodes": 22839,
+  "primary_metric": "MCC",
+  "primary_task": "PRE_SIMULATION_BINARY_DETECTABILITY",
+  "random_seed": 20260910,
+  "resume_supported": true,
+  "sa0_sa1_grouped": true,
+  "sample_feature_scaler": "REUSE_FROZEN_11C5E_DEV_TRAIN_ONLY_SCALER",
+  "sample_features": 527,
+  "selection_partition": "DEV_CALIBRATION",
+  "shuffle": "DETERMINISTIC_FIXED_RECORD_ORDER",
+  "stage": "11D-2A",
+  "status": "PASS",
+  "target": "DETECTED",
+  "threshold_selection": "DETERMINISTIC_MCC_MAXIMIZATION_ON_DEV_CALIBRATION",
+  "threshold_tie_break": [
+    "HIGHER_MCC",
+    "HIGHER_RECALL",
+    "CLOSEST_TO_0.5",
+    "LOWER_THRESHOLD"
+  ],
+  "title": "HYBRID MODEL TRAINING CONTRACT FREEZE",
+  "training_batch_size": 8192,
+  "training_contract_status": "FROZEN",
+  "validation_campaign_authorized": false,
+  "validation_vectors_exposed": 0
+}

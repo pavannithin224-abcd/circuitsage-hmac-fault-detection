@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this research prototype, please cite this software release."
+title: "Graph-Aware Fault Detection for an OpenTitan HMAC Circuit"
+type: software
+authors:
+  - family-names: "Nithin"
+    given-names: "Pavan"
+version: "1.0.0-research"
+date-released: "2026-09-13"
+license: "Apache-2.0"
+repository-code: "ADD_GITHUB_REPOSITORY_URL_BEFORE_PUBLICATION"
+keywords:
+  - VLSI fault detection
+  - OpenTitan
+  - HMAC
+  - graph neural network
+  - stuck-at fault
