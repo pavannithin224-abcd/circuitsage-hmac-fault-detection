@@ -1,17 +1,57 @@
 cff-version: 1.2.0
-message: "If you use this research prototype, please cite this software release."
-title: "Graph-Aware Fault Detection for an OpenTitan HMAC Circuit"
+message: >-
+  If you use this research prototype, its method, or its measured results,
+  please cite it using these metadata.
+title: Graph-Aware Fault Detection for an OpenTitan HMAC Circuit
+abstract: >-
+  A supervised hybrid classifier for predicting single stuck-at fault
+  detectability in a synthesized OpenTitan HMAC/SHA-256 circuit. The model fuses
+  a leakage-safe per-sample feature branch with a directed simplified graph
+  convolution branch computed over the gate-level netlist, giving 646 input
+  features and 93,185 trainable parameters. Evaluated on 438,528 held-out
+  samples it reaches balanced accuracy 0.8166, ROC-AUC 0.9166 and Brier score
+  0.1210 at a locked decision threshold of 0.4965. The model uses
+  no post-simulation features and no labels during graph propagation, so
+  structural and behavioural evidence remain disjoint. Developed under a staged
+  protocol with pre-registered acceptance criteria, pinned synthesis and
+  simulation toolchains, and hash-anchored freeze artifacts for every stage.
 type: software
 authors:
-  - family-names: "Nithin"
-    given-names: "Pavan"
-version: "1.0.0-research"
-date-released: "2026-09-13"
-license: "Apache-2.0"
-repository-code: "https://github.com/pavannithin224-abcd/circuitsage-hmac-fault-detection"
+  - family-names: Nithin
+    given-names: Pavan
+    alias: pavannithin224-abcd
+version: 1.0.0
+date-released: '2026-09-13'
+license: Apache-2.0
+repository-code: >-
+  https://github.com/pavannithin224-abcd/circuitsage-hmac-fault-detection
 keywords:
   - VLSI fault detection
+  - fault detectability prediction
+  - stuck-at fault
   - OpenTitan
   - HMAC
+  - SHA-256
   - graph neural network
-  - stuck-at fault
+  - simplified graph convolution
+  - gate-level netlist
+  - reproducible research
+# ---------------------------------------------------------------------------
+# DOI - fill in after archiving this repository on Zenodo.
+#
+#   1. https://zenodo.org  ->  Log in with GitHub
+#   2. https://zenodo.org/account/settings/github/
+#        toggle ON: circuitsage-hmac-fault-detection
+#   3. GitHub -> Releases -> Draft a new release -> new tag (e.g. v1.0.1)
+#        -> Publish release        (Zenodo only archives NEW releases)
+#   4. Zenodo issues TWO DOIs:
+#        Concept DOI  - all versions, resolves to the latest  <- use this one
+#        Version DOI  - this release only
+#   5. uncomment the two blocks below and paste the CONCEPT DOI
+#
+# doi: 10.5281/zenodo.XXXXXXX
+# identifiers:
+#   - type: doi
+#     value: 10.5281/zenodo.XXXXXXX
+#     description: Concept DOI resolving to the latest version
+# ---------------------------------------------------------------------------
