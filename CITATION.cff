@@ -25,6 +25,11 @@ date-released: '2026-09-13'
 license: Apache-2.0
 repository-code: >-
   https://github.com/pavannithin224-abcd/circuitsage-hmac-fault-detection
+doi: 10.5281/zenodo.22986785
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22986785
+    description: Concept DOI resolving to the latest version
 keywords:
   - VLSI fault detection
   - fault detectability prediction
@@ -49,9 +54,4 @@ keywords:
 #        Version DOI  - this release only
 #   5. uncomment the two blocks below and paste the CONCEPT DOI
 #
-# doi: 10.5281/zenodo.XXXXXXX
-# identifiers:
-#   - type: doi
-#     value: 10.5281/zenodo.XXXXXXX
-#     description: Concept DOI resolving to the latest version
 # ---------------------------------------------------------------------------
