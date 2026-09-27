@@ -8,7 +8,7 @@ authors:
 version: "1.0.0-research"
 date-released: "2026-09-13"
 license: "Apache-2.0"
-repository-code: "ADD_GITHUB_REPOSITORY_URL_BEFORE_PUBLICATION"
+repository-code: "https://github.com/pavannithin224-abcd/circuitsage-hmac-fault-detection"
 keywords:
   - VLSI fault detection
   - OpenTitan
