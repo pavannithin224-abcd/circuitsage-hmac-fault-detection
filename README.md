@@ -1,5 +1,9 @@
 # Graph-Aware Fault Detection for an OpenTitan HMAC Circuit
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281%2Fzenodo.22986785.svg)](https://doi.org/10.5281/zenodo.22986785)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/status-frozen%20prototype-555.svg)](#project-status)
+
 I built this project to explore a practical question: **can information from a synthesized circuit graph help us predict whether a digital fault will be detected?**
 
 The answer from this experiment is yes—but with important limits. The graph-aware hybrid model performed much better than the conventional and plain deep-learning baselines on this circuit. It also lost more performance than allowed when I moved from development vectors to separate validation vectors. I have kept both results in this repository because I want this to be useful as an honest research baseline, not just a collection of impressive numbers.
